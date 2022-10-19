@@ -22,10 +22,14 @@ const config = {
   auth0Logout: true
 };
 
-const port = process.env.PORT || 3000;
+// const port = process.env.PORT || 3000;
+const port = process.env.PORT //added this
+
 if (!config.baseURL && !process.env.BASE_URL && process.env.PORT && process.env.NODE_ENV !== 'production') {
   config.baseURL = `http://localhost:${port}`;
 }
+
+config.baseURL = `http://localhost:${port}` //added this
 
 app.use(auth(config));
 
