@@ -29,7 +29,8 @@ if (!config.baseURL && !process.env.BASE_URL && process.env.PORT && process.env.
   config.baseURL = `http://localhost:${port}`;
 }
 
-config.baseURL = `http://localhost:${port}` //added this
+//config.baseURL = `http://localhost:${port}` //added this
+config.baseURL = `https://morning-shelf-04465.herokuapp.com/` //production
 
 app.use(auth(config));
 
