@@ -54,6 +54,6 @@ app.use(function (err, req, res, next) {
 });
 
 http.createServer(app)
-  .listen(port, () => {
+  .listen(process.env.PORT || 3000, function () {
     console.log(`Listening on ${config.baseURL}`);
   });
